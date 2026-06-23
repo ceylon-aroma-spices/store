@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Products | Ceylon Aroma. Explore our luxury collection of organic Ceylon spices. Sourced ethically from Sri Lankan farms, including Alba Grade Cinnamon, Black Pepper, Cloves, Cardamom, Nutmeg, and Turmeric.">
+    <meta name="keywords" content="buy Ceylon cinnamon, organic black pepper, premium cardamom, spice exports Sri Lanka, wholesale spices Colombo">
+    <title>Our Products | Ceylon Aroma</title>
+    
+    <!-- Google Fonts Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+    <style>
+        .filter-btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+        
+        .filter-btn {
+            background-color: transparent;
+            color: var(--cream);
+            border: 1px solid rgba(196, 154, 58, 0.3);
+            padding: 0.6rem 1.8rem;
+            font-family: var(--font-body);
+            font-size: 0.8rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            border-color: var(--gold);
+            color: var(--gold);
+            background-color: rgba(196, 154, 58, 0.05);
+        }
+        
+        .product-spec-list {
+            text-align: left;
+            font-size: 0.78rem;
+            border-top: 1px solid rgba(196, 154, 58, 0.1);
+            padding-top: 1rem;
+            margin-top: 1rem;
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .product-spec-list li {
+            margin-bottom: 0.4rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .product-spec-label {
+            color: rgba(245, 235, 221, 0.55);
+        }
+        
+        .product-spec-val {
+            font-weight: 500;
+            color: var(--gold);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-logo">
+            <img src="assets/images/Logo.PNG" alt="Ceylon Aroma Logo" class="preloader-logo-img">
+            <p class="text-gold text-uppercase tracking-wider small mb-0">The Essence of Sri Lankan Spices</p>
+            <div class="preloader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top scrolled">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-luxury" href="index.html">
+                <img src="assets/images/Logo.PNG" alt="Ceylon Aroma Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sustainability.html">Sustainability</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Subpage Hero Section -->
+    <header class="hero-section sus-hero">
+        <div class="hero-bg-wrapper">
+            <img src="assets/images/rich%20aroma.jpg" alt="Premium luxury spices assortment background" class="hero-bg">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 hero-content">
+                    <span class="hero-tagline" data-aos="fade-up" data-aos-duration="1000">Exquisite Collection</span>
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+                        Ceylon <span class="gold-text">Spices</span>
+                    </h1>
+                    <p class="hero-desc mb-0" data-aos="fade-up" data-aos-duration="1400" data-aos-delay="400">
+                        Sourced straight from certified organic estates, meticulously processed, and graded to exceed international quality standards.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Collection Section -->
+    <section class="products-section py-5 my-5">
+        <div class="container">
+            
+            <!-- Category Filter Buttons -->
+            <div class="filter-btn-group" data-aos="fade-up" data-aos-duration="800">
+                <button class="filter-btn active" data-filter="all">All Spices</button>
+                <button class="filter-btn" data-filter="cinnamon">Cinnamon</button>
+                <button class="filter-btn" data-filter="whole">Whole Spices</button>
+                <button class="filter-btn" data-filter="ground">Ground Spices</button>
+            </div>
+            
+            <!-- Product Cards Grid -->
+            <div class="row g-4" id="productsGrid">
+                
+                <!-- Card 1: Ceylon Cinnamon -->
+                <div class="col-md-6 col-lg-4 product-item-card" data-category="cinnamon" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="product-card">
+                        <span class="product-badge">Alba Grade</span>
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/cinnamon_sticks.png" alt="Ceylon Cinnamon sticks" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Cinnamon</span>
+                            <h3 class="product-name">Ceylon Cinnamon</h3>
+                            <p class="product-desc">The absolute highest grade of authentic Ceylon Cinnamon quills. Extremely thin, sweet, and highly complex.</p>
+                            <ul class="product-spec-list">
+                                <li>
+                                    <span class="product-spec-label">Diameter</span>
+                                    <span class="product-spec-val">6mm - 8mm</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Moisture Content</span>
+                                    <span class="product-spec-val">&lt; 14%</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Origin</span>
+                                    <span class="product-spec-val">Galle, Sri Lanka</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html?product=ceylon-cinnamon" class="btn-luxury w-100 mt-3 py-2">Submit Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Cassia Cinnamon -->
+                <div class="col-md-6 col-lg-4 product-item-card" data-category="cinnamon" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Cassia%20Cinnamon.jpg" alt="Cassia Cinnamon rolls" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Cinnamon</span>
+                            <h3 class="product-name">Cassia Cinnamon</h3>
+                            <p class="product-desc">Thicker and harder single-layered curls. Carries a strong, spicy, and pungent aroma suitable for deep seasoning.</p>
+                            <ul class="product-spec-list">
+                                <li>
+                                    <span class="product-spec-label">Bark Thickness</span>
+                                    <span class="product-spec-val">1.5mm - 3mm</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Moisture Content</span>
+                                    <span class="product-spec-val">&lt; 15%</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Origin</span>
+                                    <span class="product-spec-val">Ratnapura, Sri Lanka</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html?product=cassia-cinnamon" class="btn-luxury w-100 mt-3 py-2">Submit Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Black Pepper -->
+                <div class="col-md-6 col-lg-4 product-item-card" data-category="whole" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="product-card">
+                        <span class="product-badge">Grade 1</span>
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/black%20pepper.jpg" alt="Black Pepper" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Whole Spices</span>
+                            <h3 class="product-name">Black Pepper</h3>
+                            <p class="product-desc">Fully matured, heavy black peppercorns dried naturally. Features high piperine content for authentic heat.</p>
+                            <ul class="product-spec-list">
+                                <li>
+                                    <span class="product-spec-label">Density</span>
+                                    <span class="product-spec-val">550 g/l min</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Piperine Content</span>
+                                    <span class="product-spec-val">4.8% - 6%</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Origin</span>
+                                    <span class="product-spec-val">Matale, Sri Lanka</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html?product=black-pepper" class="btn-luxury w-100 mt-3 py-2">Submit Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Cloves -->
+                <div class="col-md-6 col-lg-4 product-item-card" data-category="whole" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/cloves.jpg" alt="Premium Cloves" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Whole Spices</span>
+                            <h3 class="product-name">Cloves</h3>
+                            <p class="product-desc">Sun-dried flower buds with full heads and woody stems. Rich in eugenol essential oil and deeply aromatic.</p>
+                            <ul class="product-spec-list">
+                                <li>
+                                    <span class="product-spec-label">Eugenol Content</span>
+                                    <span class="product-spec-val">15% - 20%</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Color</span>
+                                    <span class="product-spec-val">Reddish Brown</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Origin</span>
+                                    <span class="product-spec-val">Kandy, Sri Lanka</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html?product=cloves" class="btn-luxury w-100 mt-3 py-2">Submit Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Cardamom -->
+                <div class="col-md-6 col-lg-4 product-item-card" data-category="whole" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="product-card">
+                        <span class="product-badge">Jumbo Green</span>
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/Selected%20Green%20Cardamom.jpg" alt="Green Cardamom pods" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Whole Spices</span>
+                            <h3 class="product-name">Cardamom</h3>
+                            <p class="product-desc">Large, bright green cardamom pods containing dark, oily seeds. Harvested from high-altitude rainforest borders.</p>
+                            <ul class="product-spec-list">
+                                <li>
+                                    <span class="product-spec-label">Size Range</span>
+                                    <span class="product-spec-val">7mm - 9mm</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Essential Oils</span>
+                                    <span class="product-spec-val">7.5% min</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Origin</span>
+                                    <span class="product-spec-val">Nuwara Eliya, SL</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html?product=cardamom" class="btn-luxury w-100 mt-3 py-2">Submit Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Nutmeg -->
+                <div class="col-md-6 col-lg-4 product-item-card" data-category="whole" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <div class="product-card">
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/nutmeg.jpg" alt="Nutmeg seeds" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Whole Spices</span>
+                            <h3 class="product-name">Nutmeg</h3>
+                            <p class="product-desc">Shelled whole nutmeg seeds, highly aromatic with warm, nutty notes. Sourced from organic forest gardens.</p>
+                            <ul class="product-spec-list">
+                                <li>
+                                    <span class="product-spec-label">Grade</span>
+                                    <span class="product-spec-val">With Shell / Naked</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Aflatoxin</span>
+                                    <span class="product-spec-val">Negative</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Origin</span>
+                                    <span class="product-spec-val">Kegalle, Sri Lanka</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html?product=nutmeg" class="btn-luxury w-100 mt-3 py-2">Submit Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Turmeric -->
+                <div class="col-md-6 col-lg-4 product-item-card" data-category="ground" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="product-card">
+                        <span class="product-badge">Organic</span>
+                        <div class="product-img-wrapper">
+                            <img src="assets/images/turmeric.jpg" alt="Turmeric Powder" class="product-img">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Ground Spices</span>
+                            <h3 class="product-name">Turmeric</h3>
+                            <p class="product-desc">Pure Ground Turmeric Powder made from volcanic southern soil rhizomes, carrying exceptional health benefits.</p>
+                            <ul class="product-spec-list">
+                                <li>
+                                    <span class="product-spec-label">Curcumin Level</span>
+                                    <span class="product-spec-val">5.5% min</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Milling Mesh</span>
+                                    <span class="product-spec-val">60 - 85 mesh</span>
+                                </li>
+                                <li>
+                                    <span class="product-spec-label">Origin</span>
+                                    <span class="product-spec-val">Hambantota, SL</span>
+                                </li>
+                            </ul>
+                            <a href="contact.html?product=turmeric" class="btn-luxury w-100 mt-3 py-2">Submit Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <a class="footer-logo" href="index.html"><img src="assets/images/Logo.PNG" alt="Ceylon Aroma Logo"></a>
+                    <p class="footer-about">
+                        Exporting the finest organic spices from Sri Lanka. Deeply committed to preserving our natural environment and maintaining the traditional farming heritage of our local communities.
+                    </p>
+                    <div class="footer-social-links">
+                        <a href="https://web.facebook.com/profile.php?id=61591123177286" target="_blank" class="footer-social-link"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/ceylon_aroma.spices/" target="_blank" class="footer-social-link"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Our Spices</a></li>
+                        <li><a href="sustainability.html">Sustainability</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h5 class="footer-title">Spices Selection</h5>
+                    <ul class="footer-links">
+                        <li><a href="products.html">Ceylon Cinnamon</a></li>
+                        <li><a href="products.html">Cassia Bark</a></li>
+                        <li><a href="products.html">Black Pepper</a></li>
+                        <li><a href="products.html">Green Cardamom</a></li>
+                        <li><a href="products.html">Aromatic Cloves</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-title">Corporate Office</h5>
+                    <ul class="footer-contact-info">
+                        <li>
+                            <i class="bi bi-geo-alt"></i>
+                            <span>190/24, Goluwawila, Rathnapura</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-telephone"></i>
+                            <span>0774856293</span>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope"></i>
+                            <span>contact.ceylonaroma@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom text-center">
+                <p>&copy; 2026 Ceylon Aroma. All Rights Reserved. Crafted with passion and authentic Sri Lankan heritage.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div id="backToTop" class="back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            once: true,
+            mirror: false
+        });
+        
+        // Category Filter Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productCards = document.querySelectorAll('.product-item-card');
+            
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active from all buttons
+                    filterButtons.forEach(b => b.classList.remove('active'));
+                    // Add active to current
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    productCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        
+                        if (filterValue === 'all' || cardCategory === filterValue) {
+                            card.style.display = 'block';
+                            // Re-trigger fade in
+                            card.classList.add('fade-in-page');
+                        } else {
+                            card.style.display = 'none';
+                            card.classList.remove('fade-in-page');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
